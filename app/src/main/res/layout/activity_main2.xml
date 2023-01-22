@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+<com.google.android.material.appbar.AppBarLayout
+android:layout_width="match_parent"
+android:layout_height="50dp"
+android:background="@color/black">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="15dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/back"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:text="Player Statistic"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</RelativeLayout>
+</com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="300dp"
+        android:layout_height="170dp"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="20dp"
+        app:contentPadding="4dp"
+        app:cardBackgroundColor="@color/black"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:src="@null"
+                />
+    <ImageView
+        android:id="@+id/circle"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/circle"
+        android:layout_marginLeft="16dp"
+
+        />
+
+            <TextView
+                android:id="@+id/player_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Player Name"
+                android:textColor="@color/white"
+                android:layout_below="@id/circle"/>
+
+            <TextView
+                android:id="@+id/position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginBottom="20dp"
+                android:text="Position played"
+                android:textColor="#797979"
+                android:textSize="8sp"
+                android:layout_below="@id/player_name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/position"
+                android:text="No."
+                android:textSize="21sp"
+                android:textColor="@color/purple_200"
+                android:layout_marginLeft="16dp"
+
+                />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TableLayout
+        android:layout_width="293dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        <TextView
+            android:text="Appearances"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"/>
+            <TextView
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingLeft="20dp"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:text="Minutes played"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingLeft="40dp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingLeft="15dp"
+                android:textColor="@color/black"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <TextView
+                android:text="Runs/Wickets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+            <TextView
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingLeft="20dp"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+            <TextView
+                android:text="Assists"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingLeft="40dp"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+            <TextView
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingLeft="15dp"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+        </TableRow>
+    </TableLayout>
+    <com.github.mikephil.charting.charts.LineChart
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.github.mikephil.charting.charts.RadarChart
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

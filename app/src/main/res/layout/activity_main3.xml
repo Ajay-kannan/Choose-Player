@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+
+<com.google.android.material.appbar.AppBarLayout
+android:layout_width="match_parent"
+android:layout_height="50dp"
+android:background="@color/black">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="15dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/back"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+
+        android:text="Team Statistic"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</RelativeLayout>
+</com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="320dp"
+        android:layout_height="170dp"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="20dp"
+        app:contentPadding="4dp"
+        app:cardBackgroundColor="@color/black"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+
+            <ImageView
+                android:id="@+id/circle"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="20dp"
+                android:src="@drawable/circle"
+                android:layout_marginLeft="16dp" />
+
+            <TextView
+                android:id="@+id/player_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Team Name"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+                android:layout_marginRight="50dp"
+                />
+
+            <TextView
+                android:id="@+id/position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Ranking"
+                android:textColor="#797979"
+                android:textSize="8sp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/player_name"
+                android:layout_marginRight="96dp"
+                android:layout_marginTop="10dp"/>
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Top players"
+        android:textAlignment="center"
+        android:textSize="8sp"
+        android:layout_margin="3dp"
+        android:textColor="#797979"
+
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+       >
+        <ImageView
+            android:layout_width="143dp"
+            android:layout_height="127dp"
+            android:src="@null"
+            android:layout_marginRight="40dp"
+            android:background="@color/black"/>
+        <ImageView
+            android:layout_width="143dp"
+            android:layout_height="127dp"
+            android:src="@null"
+            android:background="@color/black"/>
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="293dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView
+                android:text="Sixes"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+            <TextView
+                android:text="534"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+
+                android:textColor="@color/black"
+                android:paddingTop="10dp"
+                android:textDirection="ltr"
+               />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView
+                android:text="Fours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+            <TextView
+                android:text="34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView
+                android:text="Run rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+            <TextView
+                android:text="46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView
+                android:text="Total Runs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+            <TextView
+                android:text="34546"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView
+                android:text="Plan Accuracy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+
+                android:paddingTop="10dp"
+                android:text="0"
+                android:textColor="@color/black" />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView
+                android:text="Catches"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+            <TextView
+                android:text="456"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+
+                android:textColor="@color/black"
+                android:paddingTop="10dp"
+
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView
+                android:text="Fair Play rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+            <TextView
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView
+                android:text="Wide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+            <TextView
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView
+                android:text="Wickets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+            <TextView
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView
+                android:text="No ball"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+            <TextView
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+
+                android:textColor="@color/black"
+                android:paddingTop="10dp"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>

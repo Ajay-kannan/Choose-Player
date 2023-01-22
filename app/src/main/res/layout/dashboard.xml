@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="end">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Logout"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_gravity="center"
+            android:layout_height="24dp"
+            android:src="@drawable/logoutimg"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:src="@drawable/dashboardimg"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="171dp"
+        android:src="@drawable/playerstatimg"
+
+        android:layout_marginTop="-150dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="171dp"
+        android:src="@drawable/teamstatimg"
+        android:layout_marginTop="-30dp"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="171dp"
+        android:src="@drawable/addplayimg"
+        android:layout_marginTop="-30dp"
+        />
+
+</LinearLayout>
