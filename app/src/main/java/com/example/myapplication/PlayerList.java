@@ -8,12 +8,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MainActivity4 extends AppCompatActivity {
+public class PlayerList extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main4);
+        setContentView(R.layout.activity_player_list);
         RecyclerView recyclerView = findViewById(R.id.player_list);
         PLayerDetails p = new PLayerDetails("Azarudeen","batsman","7");
         PLayerDetails p2 = new PLayerDetails("Nandhini","bowler","2");

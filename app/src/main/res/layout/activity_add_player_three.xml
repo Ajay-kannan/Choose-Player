@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPlayerTwo"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/back_btn"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_regular"
+                android:text="Add Players"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Step 3 of 4"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:fontFamily="@font/inter_regular"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Position"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter_regular"/>
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:button="@null"
+                android:textColor="@color/white"
+                android:background="@drawable/checkstate"
+                android:text="Wicket Keeper"
+                android:gravity="center"/>
+            <CheckBox
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:button="@null"
+                android:textColor="@color/white"
+                android:background="@drawable/checkstate"
+                android:text="Batting"
+                android:layout_marginHorizontal="20dp"
+                android:gravity="center"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <CheckBox
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:button="@null"
+                android:textColor="@color/white"
+                android:background="@drawable/checkstate"
+                android:text="Bowling"
+                android:gravity="center"/>
+            <CheckBox
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:button="@null"
+                android:textColor="@color/white"
+                android:background="@drawable/checkstate"
+                android:text="Fielding"
+                android:layout_marginHorizontal="20dp"
+                android:gravity="center"/>
+        </TableRow>
+    </TableLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next"
+        android:layout_marginTop="50dp"
+        style="@style/purple_btn"
+        android:text="Next"/>
+</LinearLayout>
