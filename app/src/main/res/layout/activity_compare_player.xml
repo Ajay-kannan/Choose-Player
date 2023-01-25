@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".compare_player"
+    android:orientation="vertical">
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/back_btn"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:text="Compare Player"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/inter_regular"/>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view1"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#923CFF"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="20dp"
+        app:contentPadding="4dp">
+
+        <EditText
+            android:id="@+id/search_player1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="10dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:paddingLeft="35dp"
+            android:text="Select Player 1"
+            android:textColor="@color/white" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view2"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+
+        app:cardBackgroundColor="#923CFF"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="20dp"
+        app:contentPadding="4dp">
+
+        <EditText
+            android:id="@+id/search_player2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="10dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:paddingLeft="35dp"
+            android:text="Select Player 2"
+            android:textColor="@color/white" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view3"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="#923CFF"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="20dp"
+        app:contentPadding="4dp">
+
+        <EditText
+            android:id="@+id/bidding_amount"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="10dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:paddingLeft="35dp"
+            android:text="Bidding amount"
+            android:textColor="@color/white" />
+    </androidx.cardview.widget.CardView>
+
+    <RadioGroup
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_margin="40dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="169dp"
+            android:layout_height="65dp"
+            android:text="Player 1"
+            android:layout_margin="2dp"
+            android:background="@drawable/checkstate"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="169dp"
+            android:layout_height="65dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/checkstate"
+            android:text="Player 2" />
+    </RadioGroup>
+
+
+</LinearLayout>
