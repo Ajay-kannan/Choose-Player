@@ -120,17 +120,20 @@
             android:layout_width="169dp"
             android:layout_height="65dp"
             android:text="Player 1"
-            android:layout_margin="2dp"
-            android:background="@drawable/checkstate"
+            android:button="@null"
+            android:textColor="@color/white"
+            android:background="@drawable/radio_select_left"
             android:checked="true"
-            />
+            android:gravity="center"/>
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="169dp"
             android:layout_height="65dp"
-            android:layout_margin="2dp"
-            android:background="@drawable/checkstate"
+            android:textColor="@color/white"
+            android:background="@drawable/radio_select_right"
+            android:button="@null"
+            android:gravity="center"
             android:text="Player 2" />
     </RadioGroup>
 
