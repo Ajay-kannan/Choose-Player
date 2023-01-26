@@ -10,23 +10,23 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 
 public class compare_player extends AppCompatActivity {
 
-    EditText next1 = (EditText) findViewById(R.id.search_player1);
+    Button next1;
     ActivityResultLauncher<Intent> someActivityResultLauncher;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compare_player);
-
+        next1 = findViewById(R.id.search_player1);
 
         next1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), PlayerList.class);
-
                 someActivityResultLauncher.launch(myIntent);
             }
 

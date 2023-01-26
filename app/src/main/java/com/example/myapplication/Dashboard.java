@@ -26,7 +26,7 @@ public class Dashboard extends AppCompatActivity {
             startActivity(intent);
         });
         compare.setOnClickListener(v->{
-            Intent intent = new Intent(this,TeamStatistics.class);
+            Intent intent = new Intent(this,compare_player.class);
             startActivity(intent);
         });
     }

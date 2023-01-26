@@ -5,9 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".compare_player"
-    android:orientation="vertical">
-
-
+    android:orientation="vertical"
+    android:background="@color/white">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -47,7 +46,7 @@
         app:cardElevation="20dp"
         app:contentPadding="4dp">
 
-        <EditText
+        <Button
             android:id="@+id/search_player1"
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -71,7 +70,7 @@
         app:cardElevation="20dp"
         app:contentPadding="4dp">
 
-        <EditText
+        <Button
             android:id="@+id/search_player2"
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -135,7 +134,6 @@
             android:button="@null"
             android:gravity="center"
             android:text="Player 2" />
-
     </RadioGroup>
 
     <LinearLayout

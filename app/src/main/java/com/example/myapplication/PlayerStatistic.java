@@ -336,7 +336,6 @@ public class PlayerStatistic extends AppCompatActivity {
 
 
 
-
                     batting2016.findOne(filter).getAsync(result1 -> {
                         if (result1.isSuccess()){
                             Document doc = result1.get();
