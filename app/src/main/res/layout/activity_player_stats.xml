@@ -469,7 +469,8 @@
 
             <TableLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -703,6 +704,7 @@
             </TableLayout>
 
             <com.github.mikephil.charting.charts.LineChart
+                android:visibility="gone"
                 android:id="@+id/lineChart"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"

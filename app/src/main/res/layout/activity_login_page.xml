@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".login_page">
+
+    <ImageView
+        android:id="@+id/login_page_img"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        app:srcCompat="@drawable/login"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp" />
+
+    <TextView
+        android:id="@+id/login_page_textview"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginLeft="50dp"
+        android:text="Welcome Back"
+        android:textSize="30sp"
+        android:textColor="#923CFF"
+        android:textStyle="bold"
+        android:layout_below="@id/login_page_img"/>
+    <EditText
+        android:id="@+id/login_page_mail"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/login_page_textview"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rectangle_btn"
+        android:drawablePadding="20dp"
+        android:drawableLeft="@drawable/ic_baseline_mail_24"
+        android:ems="10"
+        android:paddingLeft="20dp"
+        android:hint="Email"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/white" />
+
+    <EditText
+        android:id="@+id/login_page_password"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/login_page_mail"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rectangle_btn"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawableRight="@drawable/ic_baseline_visibility_24"
+
+        android:drawablePadding="20dp"
+        android:paddingRight="20dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white"/>
+
+
+    <Button
+        android:id="@+id/login_page_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/login_page_password"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/round_btn"
+        android:text="Login"
+
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/sign_up"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_page_btn"
+
+        android:layout_marginLeft="155dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Sign Up"
+        android:textColor="@color/black"
+
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

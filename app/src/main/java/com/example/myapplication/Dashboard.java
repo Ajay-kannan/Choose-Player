@@ -18,7 +18,7 @@ public class Dashboard extends AppCompatActivity {
         ImageView playerList = findViewById(R.id.player_list);
         ImageView compare = findViewById(R.id.compare);
         addPlayer.setOnClickListener(v->{
-            Intent intent = new Intent(this,AddPlayerOne.class);
+            Intent intent = new Intent(this,activity_manager_profile.class);
             startActivity(intent);
         });
         playerList.setOnClickListener(v->{

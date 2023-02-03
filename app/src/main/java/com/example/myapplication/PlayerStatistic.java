@@ -335,119 +335,118 @@ public class PlayerStatistic extends AppCompatActivity {
                     });
 
 
-
-                    batting2016.findOne(filter).getAsync(result1 -> {
-                        if (result1.isSuccess()){
-                            Document doc = result1.get();
-                            fiftyEntry.add(new Entry(1,doc.getInteger("50")));
-//                            hundredEntry.add(new Entry(1,result1.get().getInteger("100")));
-//                            srEntry.add(new Entry(1,result1.get().getInteger("SR")));
-//                            runsEntry.add(new Entry(1,result1.get().getInteger("Runs")));
-//                            avgEntry.add(new Entry(1,result1.get().getInteger("Avg")));
-//                            System.out.println(result1.get().getInteger("50"));
-                        }
-                        else {
-                            Toast.makeText(getApplicationContext(),"Not",Toast.LENGTH_LONG).show();
-                            System.out.println(result1.getError());
-                        }
-                    });
-
-                    batting2017.findOne(filter).getAsync(result1 -> {
-                        if (result1.isSuccess()){
-                            try {
-                                fiftyEntry.add(new Entry(2,result1.get().getInteger("50")));
-                            }catch (NullPointerException ex) {
-                                fiftyEntry.add(new Entry(2,0));
-                            }
-//                            hundredEntry.add(new Entry(1,result1.get().getInteger("100")));
-//                            srEntry.add(new Entry(1,result1.get().getDouble("SR")));
-//                            runsEntry.add(new Entry(1,result1.get().getInteger("Runs")));
-//                            avgEntry.add(new Entry(1,result1.get().getInteger("Avg")));
-                        }
-                        else {
-                            Toast.makeText(getApplicationContext(),"Not",Toast.LENGTH_LONG).show();
-                            System.out.println(result1.getError());
-                        }
-                    });
-
-                    batting2018.findOne(filter).getAsync(result1 -> {
-                        if (result1.isSuccess()){
-                            fiftyEntry.add(new Entry(3,result1.get().getInteger("50")));
-//                            hundredEntry.add(new Entry(1,result1.get().getInteger("100")));
-//                            srEntry.add(new Entry(1,result1.get().getInteger("SR")));
-//                            runsEntry.add(new Entry(1,result1.get().getInteger("Runs")));
-//                            avgEntry.add(new Entry(1,result1.get().getInteger("Avg")));
-                        }
-                        else {
-                            Toast.makeText(getApplicationContext(),"Not",Toast.LENGTH_LONG).show();
-                            System.out.println(result1.getError());
-                        }
-                    });
-
-                    batting2019.findOne(filter).getAsync(result1 -> {
-                        if (result1.isSuccess()){
-                            fiftyEntry.add(new Entry(4,result1.get().getInteger("50")));
-//                            hundredEntry.add(new Entry(1,result1.get().getInteger("100")));
-//                            srEntry.add(new Entry(1,result1.get().getInteger("SR")));
-//                            runsEntry.add(new Entry(1,result1.get().getInteger("Runs")));
-//                            avgEntry.add(new Entry(1,result1.get().getInteger("Avg")));
-                        }
-                        else {
-                            Toast.makeText(getApplicationContext(),"Not",Toast.LENGTH_LONG).show();
-                            System.out.println(result1.getError());
-                        }
-                    });
+//                    batting2016.findOne(filter).getAsync(result1 -> {
+//                        if (result1.isSuccess()){
+//                            Document doc = result1.get();
+//                            fiftyEntry.add(new Entry(1,doc.getInteger("50")));
+////                            hundredEntry.add(new Entry(1,result1.get().getInteger("100")));
+////                            srEntry.add(new Entry(1,result1.get().getInteger("SR")));
+////                            runsEntry.add(new Entry(1,result1.get().getInteger("Runs")));
+////                            avgEntry.add(new Entry(1,result1.get().getInteger("Avg")));
+////                            System.out.println(result1.get().getInteger("50"));
+//                        }
+//                        else {
+//                            Toast.makeText(getApplicationContext(),"Not",Toast.LENGTH_LONG).show();
+//                            System.out.println(result1.getError());
+//                        }
+//                    });
 //
-                    batting2020.findOne(filter).getAsync(result1 -> {
-                        if (result1.isSuccess()){
-                            fiftyEntry.add(new Entry(5,result1.get().getInteger("50")));
-//                            hundredEntry.add(new Entry(1,result1.get().getInteger("100")));
-//                            srEntry.add(new Entry(1,result1.get().getInteger("SR")));
-//                            runsEntry.add(new Entry(1,result1.get().getInteger("Runs")));
-//                            avgEntry.add(new Entry(1,result1.get().getInteger("Avg")));
-                        }
-                        else {
-                            Toast.makeText(getApplicationContext(),"Not",Toast.LENGTH_LONG).show();
-                            System.out.println(result1.getError());
-                        }
-                    });
+//                    batting2017.findOne(filter).getAsync(result1 -> {
+//                        if (result1.isSuccess()){
+//                            try {
+//                                fiftyEntry.add(new Entry(2,result1.get().getInteger("50")));
+//                            }catch (NullPointerException ex) {
+//                                fiftyEntry.add(new Entry(2,0));
+//                            }
+////                            hundredEntry.add(new Entry(1,result1.get().getInteger("100")));
+////                            srEntry.add(new Entry(1,result1.get().getDouble("SR")));
+////                            runsEntry.add(new Entry(1,result1.get().getInteger("Runs")));
+////                            avgEntry.add(new Entry(1,result1.get().getInteger("Avg")));
+//                        }
+//                        else {
+//                            Toast.makeText(getApplicationContext(),"Not",Toast.LENGTH_LONG).show();
+//                            System.out.println(result1.getError());
+//                        }
+//                    });
 //
-                    batting2021.findOne(filter).getAsync(result1 -> {
-                        if (result1.isSuccess()){
-                            fiftyEntry.add(new Entry(6,result1.get().getInteger("50")));
-//                            hundredEntry.add(new Entry(1,result1.get().getInteger("100")));
-//                            srEntry.add(new Entry(1,result1.get().getInteger("SR")));
-//                            runsEntry.add(new Entry(1,result1.get().getInteger("Runs")));
-//                            avgEntry.add(new Entry(1,result1.get().getInteger("Avg")));
-                        }
-                    });
+//                    batting2018.findOne(filter).getAsync(result1 -> {
+//                        if (result1.isSuccess()){
+//                            fiftyEntry.add(new Entry(3,result1.get().getInteger("50")));
+////                            hundredEntry.add(new Entry(1,result1.get().getInteger("100")));
+////                            srEntry.add(new Entry(1,result1.get().getInteger("SR")));
+////                            runsEntry.add(new Entry(1,result1.get().getInteger("Runs")));
+////                            avgEntry.add(new Entry(1,result1.get().getInteger("Avg")));
+//                        }
+//                        else {
+//                            Toast.makeText(getApplicationContext(),"Not",Toast.LENGTH_LONG).show();
+//                            System.out.println(result1.getError());
+//                        }
+//                    });
 //
-                    batting2022.findOne(filter).getAsync(result1 -> {
-                        if (result1.isSuccess()){
-                            fiftyEntry.add(new Entry(7,result1.get().getInteger("50")));
-//                            hundredEntry.add(new Entry(1,result1.get().getInteger("100")));
-//                            srEntry.add(new Entry(1,result1.get().getInteger("SR")));
-//                            runsEntry.add(new Entry(1,result1.get().getInteger("Runs")));
-//                            avgEntry.add(new Entry(1,result1.get().getInteger("Avg")));
-                        }
-                    });
+//                    batting2019.findOne(filter).getAsync(result1 -> {
+//                        if (result1.isSuccess()){
+//                            fiftyEntry.add(new Entry(4,result1.get().getInteger("50")));
+////                            hundredEntry.add(new Entry(1,result1.get().getInteger("100")));
+////                            srEntry.add(new Entry(1,result1.get().getInteger("SR")));
+////                            runsEntry.add(new Entry(1,result1.get().getInteger("Runs")));
+////                            avgEntry.add(new Entry(1,result1.get().getInteger("Avg")));
+//                        }
+//                        else {
+//                            Toast.makeText(getApplicationContext(),"Not",Toast.LENGTH_LONG).show();
+//                            System.out.println(result1.getError());
+//                        }
+//                    });
+////
+//                    batting2020.findOne(filter).getAsync(result1 -> {
+//                        if (result1.isSuccess()){
+//                            fiftyEntry.add(new Entry(5,result1.get().getInteger("50")));
+////                            hundredEntry.add(new Entry(1,result1.get().getInteger("100")));
+////                            srEntry.add(new Entry(1,result1.get().getInteger("SR")));
+////                            runsEntry.add(new Entry(1,result1.get().getInteger("Runs")));
+////                            avgEntry.add(new Entry(1,result1.get().getInteger("Avg")));
+//                        }
+//                        else {
+//                            Toast.makeText(getApplicationContext(),"Not",Toast.LENGTH_LONG).show();
+//                            System.out.println(result1.getError());
+//                        }
+//                    });
+////
+//                    batting2021.findOne(filter).getAsync(result1 -> {
+//                        if (result1.isSuccess()){
+//                            fiftyEntry.add(new Entry(6,result1.get().getInteger("50")));
+////                            hundredEntry.add(new Entry(1,result1.get().getInteger("100")));
+////                            srEntry.add(new Entry(1,result1.get().getInteger("SR")));
+////                            runsEntry.add(new Entry(1,result1.get().getInteger("Runs")));
+////                            avgEntry.add(new Entry(1,result1.get().getInteger("Avg")));
+//                        }
+//                    });
+////
+//                    batting2022.findOne(filter).getAsync(result1 -> {
+//                        if (result1.isSuccess()){
+//                            fiftyEntry.add(new Entry(7,result1.get().getInteger("50")));
+////                            hundredEntry.add(new Entry(1,result1.get().getInteger("100")));
+////                            srEntry.add(new Entry(1,result1.get().getInteger("SR")));
+////                            runsEntry.add(new Entry(1,result1.get().getInteger("Runs")));
+////                            avgEntry.add(new Entry(1,result1.get().getInteger("Avg")));
+//                        }
+//                    });
                 } else {
                     System.out.println("Some Error");
                     Toast.makeText(PlayerStatistic.this, "Not logged in", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-        matchPlayed.setOnClickListener(v->{
-            for (Entry entry: fiftyEntry) {
-                System.out.println(entry.getY());
-            }
-            lineChart.setData(lineData);
-            dataSet.notifyDataSetChanged();
-            lineData.notifyDataChanged();
-            lineChart.notifyDataSetChanged();
-            lineChart.invalidate();
-        });
-    }
+//        matchPlayed.setOnClickListener(v->{
+//            for (Entry entry: fiftyEntry) {
+//                System.out.println(entry.getY());
+//            }
+//            lineChart.setData(lineData);
+//            dataSet.notifyDataSetChanged();
+//            lineData.notifyDataChanged();
+//            lineChart.notifyDataSetChanged();
+//            lineChart.invalidate();
+//        });
+}
 
     private void setUpUi() {
         fullNameTxt = findViewById(R.id.fullname);

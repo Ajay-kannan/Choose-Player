@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -26,7 +27,7 @@ import io.realm.mongodb.mongo.MongoDatabase;
 import io.realm.mongodb.mongo.iterable.MongoCursor;
 
 
-public class PlayerList extends AppCompatActivity {
+public class ComparePlayerList extends AppCompatActivity {
 
     App app;
     User user;
@@ -34,18 +35,27 @@ public class PlayerList extends AppCompatActivity {
     MongoDatabase db;
     MongoCollection<Document> collection;
     String appId = "chooseplayer-qwwcq";
-    PlayerListAdapter playerListAdapter;
+    ComparePlayerListAdapter playerListAdapter;
+    PlayerForCompare playerForCompare;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player_list);
 
-
+        Realm.init(getApplicationContext());
 
         ArrayList<PLayerDetails> list = new ArrayList<>();
         RecyclerView recyclerView = findViewById(R.id.player_list);
-        Realm.init(getApplicationContext());
+
+        playerForCompare = (name,team) -> {
+            Intent intent = new Intent(ComparePlayerList.this,compare_player.class);
+            intent.putExtra("name",name);
+            intent.putExtra("team",team);
+            setResult(RESULT_OK,intent);
+            finish();
+        };
+
         app = new App(new AppConfiguration.Builder(appId).build());
 
         app.loginAsync(Credentials.anonymous(), new App.Callback<User>() {
@@ -57,7 +67,7 @@ public class PlayerList extends AppCompatActivity {
                     db = client.getDatabase("ChoosePlayer");
                     collection = db.getCollection("player_stats");
                     System.out.println("No Error");
-                    Toast.makeText(PlayerList.this, "logged in", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ComparePlayerList.this, "logged in", Toast.LENGTH_SHORT).show();
                     RealmResultTask<MongoCursor<Document>> playerList = collection.find().iterator();
 
                     playerList.getAsync(task->{
@@ -68,7 +78,7 @@ public class PlayerList extends AppCompatActivity {
                                 PLayerDetails p = new PLayerDetails(document.getString("Name"),document.getString("Type"),document.getString("Team"));
                                 list.add(p);
                             }
-                            playerListAdapter = new PlayerListAdapter(PlayerList.this,list);
+                            playerListAdapter = new ComparePlayerListAdapter(ComparePlayerList.this,list,playerForCompare);
                             recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(),RecyclerView.VERTICAL,false));
                             recyclerView.setAdapter(playerListAdapter);
                             Toast.makeText(getApplicationContext(), "success", Toast.LENGTH_SHORT).show();
@@ -79,7 +89,7 @@ public class PlayerList extends AppCompatActivity {
                 }
                 else{
                     System.out.println("Some Error");
-                    Toast.makeText(PlayerList.this, "Not logged in", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ComparePlayerList.this, "Not logged in", Toast.LENGTH_SHORT).show();
                 }
             }
         });

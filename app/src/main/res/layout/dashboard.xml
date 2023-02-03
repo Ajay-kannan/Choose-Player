@@ -49,7 +49,7 @@
         android:id="@+id/add_player"
         android:layout_width="match_parent"
         android:layout_height="171dp"
-        android:src="@drawable/addplayimg"
+        android:src="@drawable/account"
         android:layout_marginTop="-30dp"/>
 
 </LinearLayout>
